@@ -8,18 +8,8 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "vegetable", schema = "fsweb")
-public class Vegetable {
+public class Vegetable extends Plant{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
-    @Column(name = "name")
-    private String name;
-
-    @Column(name = "price")
-    private Double price;
-
-    @Column(name = "is_grown_tree")
-    private Boolean isGrownTree;
+    @Column(name = "is_grown_on_tree")
+    private boolean isGrownOnTree;
 }
